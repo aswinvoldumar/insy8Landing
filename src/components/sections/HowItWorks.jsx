@@ -1,4 +1,4 @@
-import { ArrowRight, BarChart3, Database, MessageSquare, PieChart, Upload } from 'lucide-react'
+﻿import { ArrowRight, BarChart3, Database, MessageSquare, PieChart, Upload } from 'lucide-react'
 import Container from '../ui/Container.jsx'
 import SectionHeading from '../ui/SectionHeading.jsx'
 import FeatureCard from './FeatureCard.jsx'
@@ -88,11 +88,7 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="relative py-16 sm:py-20 lg:py-24">
       <Container>
-        <SectionHeading
-          title="How "
-          highlight="Insy8.ai"
-          titleSuffix=" Works"
-        />
+        <SectionHeading title="How " highlight="Insy8.ai" titleSuffix=" Works" />
 
         <div className="relative mt-12 lg:mt-16">
           <div className="flex flex-col items-stretch gap-6 lg:flex-row lg:items-stretch lg:gap-3">
