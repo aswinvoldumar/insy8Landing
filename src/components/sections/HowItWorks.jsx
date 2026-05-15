@@ -1,6 +1,7 @@
-﻿import { ArrowRight, BarChart3, Database, MessageSquare, PieChart, Upload } from 'lucide-react'
+﻿import { BarChart3, Database, MessageSquare, PieChart, Upload } from 'lucide-react'
 import Container from '../ui/Container.jsx'
 import SectionHeading from '../ui/SectionHeading.jsx'
+import FlowConnector from '../ui/FlowConnector.jsx'
 import FeatureCard from './FeatureCard.jsx'
 
 function ConnectVisual() {
@@ -71,21 +72,6 @@ function InsightVisual() {
   )
 }
 
-function StepArrow() {
-  return (
-    <div
-      className="hidden shrink-0 flex-col items-center justify-center gap-2 self-center px-1 text-zinc-600 lg:flex"
-      aria-hidden
-    >
-      <div className="flex items-center gap-2">
-        <div className="h-px w-6 border-t border-dashed border-white/20 sm:w-10" />
-        <ArrowRight className="h-5 w-5" />
-        <div className="h-px w-6 border-t border-dashed border-white/20 sm:w-10" />
-      </div>
-    </div>
-  )
-}
-
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="relative py-16 sm:py-20 lg:py-24">
@@ -105,7 +91,7 @@ export default function HowItWorks() {
               </FeatureCard>
             </div>
 
-            <StepArrow />
+            <FlowConnector />
 
             <div className="flex min-w-0 flex-1">
               <FeatureCard
@@ -118,7 +104,7 @@ export default function HowItWorks() {
               </FeatureCard>
             </div>
 
-            <StepArrow />
+            <FlowConnector />
 
             <div className="flex min-w-0 flex-1">
               <FeatureCard
