@@ -3,6 +3,7 @@ import { Menu, MoveRight, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Container from '../ui/Container.jsx'
 import Button from '../ui/Button.jsx'
+import Logo from '../ui/Logo.jsx'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -38,13 +39,7 @@ export default function Navbar() {
             className="group flex items-center gap-3 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-blue-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#020617]"
           >
             <span className="flex items-center gap-2">
-              <span className="text-lg font-semibold tracking-tight text-white sm:text-xl">
-                insy8<span className="text-blue-400">.ai</span>
-              </span>
-              <span
-                className="hidden h-2 w-2 rounded-full bg-blue-400 shadow-[0_0_12px_rgba(96,165,250,0.85)] sm:inline"
-                aria-hidden
-              />
+              <Logo className="text-lg sm:text-xl" />
               <span className="hidden text-sm text-zinc-500 sm:inline sm:text-[13px]">
                 AI Data Analyst
               </span>
