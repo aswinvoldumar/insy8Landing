@@ -27,6 +27,16 @@ body {
   @apply bg-gradient-to-r from-brand-violet to-brand-cyan;
 }
 
+/* Darker gradient for buttons — keeps brand hues, readable white text */
+.bg-brand-gradient-btn {
+  background: linear-gradient(135deg, #5a4ad4 0%, #6b5cee 45%, #2a8fa8 100%);
+  color: #ffffff;
+}
+
+.bg-brand-gradient-btn:hover {
+  background: linear-gradient(135deg, #6355e0 0%, #7568f0 45%, #3299b0 100%);
+}
+
 .shadow-brand {
   box-shadow: 0 10px 40px -12px rgb(123 111 255 / 0.45);
 }

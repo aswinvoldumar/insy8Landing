@@ -2,9 +2,9 @@ import { motion } from 'framer-motion'
 
 const variants = {
   primary:
-    'bg-brand-gradient text-white shadow-brand border border-white/10 hover:shadow-brand-lg',
+    'bg-brand-gradient-btn font-semibold text-white shadow-brand border border-white/15 hover:shadow-brand-lg [text-shadow:0_1px_2px_rgba(0,0,0,0.25)]',
   secondary:
-    'border border-white/20 bg-white/5 text-white backdrop-blur-md hover:border-brand-cyan/30 hover:bg-white/10',
+    'border border-white/25 bg-white/10 font-medium text-zinc-100 backdrop-blur-md hover:border-brand-cyan/40 hover:bg-white/15 hover:text-white',
   ghost: 'text-zinc-300 hover:text-white hover:bg-white/5',
 }
 
