@@ -33,12 +33,14 @@ function AskVisual() {
           Forecast next quarter
         </span>
       </div>
-      <div className="flex items-center justify-center gap-2">
-        <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-brand-violet/30 bg-brand-violet/10">
+      <div className="flex items-stretch gap-2">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-brand-violet/30 bg-brand-violet/10">
           <MessageSquare className="h-6 w-6 text-brand-cyan" aria-hidden />
         </div>
-        <div className="h-10 flex-1 rounded-xl border border-white/10 bg-white/5 px-3 text-xs leading-10 text-zinc-400">
-          Ask anything about your metrics…
+        <div className="flex min-h-12 min-w-0 flex-1 items-center rounded-xl border border-white/10 bg-white/5 px-3 py-2.5">
+          <span className="truncate text-xs leading-snug text-zinc-400">
+            Ask anything about your metrics…
+          </span>
         </div>
       </div>
     </div>
@@ -92,7 +94,7 @@ export default function HowItWorks() {
 
         <div className="relative mt-12 lg:mt-16">
           <div className="flex flex-col items-stretch gap-6 lg:flex-row lg:items-stretch lg:gap-3">
-            <div className="min-w-0 flex-1">
+            <div className="flex min-w-0 flex-1">
               <FeatureCard
                 number="01"
                 title="Connect your data"
@@ -105,7 +107,7 @@ export default function HowItWorks() {
 
             <StepArrow />
 
-            <div className="min-w-0 flex-1">
+            <div className="flex min-w-0 flex-1">
               <FeatureCard
                 number="02"
                 title="Ask questions"
@@ -118,7 +120,7 @@ export default function HowItWorks() {
 
             <StepArrow />
 
-            <div className="min-w-0 flex-1">
+            <div className="flex min-w-0 flex-1">
               <FeatureCard
                 number="03"
                 title="Get AI Insights"

@@ -37,7 +37,7 @@ export default function FeatureCard({
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.45 }}
       whileHover={{ y: -6 }}
-      className={`relative overflow-hidden rounded-3xl border border-white/10 bg-[#071028]/80 p-6 shadow-xl shadow-black/30 ring-1 backdrop-blur-md ${a.ring} ${a.glow}`}
+      className={`relative flex h-full w-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-[#071028]/80 p-6 shadow-xl shadow-black/30 ring-1 backdrop-blur-md ${a.ring} ${a.glow}`}
     >
       <div
         className={`pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-gradient-to-br from-white/10 to-transparent blur-2xl`}
@@ -50,14 +50,14 @@ export default function FeatureCard({
               {number}
             </p>
             <h3 className="mt-4 text-lg font-semibold text-white sm:text-xl">{title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-zinc-400 sm:text-[15px]">
+            <p className="mt-2 min-h-[4.5rem] text-sm leading-relaxed text-zinc-400 sm:min-h-[5rem] sm:text-[15px]">
               {description}
             </p>
           </div>
         </div>
 
         <div
-          className={`mt-6 flex flex-1 items-center justify-center rounded-2xl border bg-white/[0.03] p-4 ${a.border}`}
+          className={`mt-6 flex min-h-[220px] flex-1 items-center justify-center overflow-hidden rounded-2xl border bg-white/[0.03] p-4 sm:min-h-[240px] ${a.border}`}
         >
           {children}
         </div>
