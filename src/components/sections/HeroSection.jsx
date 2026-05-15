@@ -79,7 +79,7 @@ export default function HeroSection() {
                 whileHover={reduceMotion ? undefined : { scale: 1.01 }}
                 whileTap={reduceMotion ? undefined : { scale: 0.99 }}
                 transition={{ type: 'spring', stiffness: 420, damping: 28 }}
-                className="group relative w-full cursor-pointer overflow-hidden rounded-3xl border border-white/10 bg-[#071028]/60 shadow-2xl shadow-black/50 ring-1 ring-white/10 backdrop-blur-md outline-none focus-visible:ring-2 focus-visible:ring-blue-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#020617]"
+                className="group relative w-full cursor-pointer overflow-hidden rounded-3xl border border-white/10 bg-[#071028]/90 shadow-2xl shadow-black/50 ring-1 ring-white/10 outline-none focus-visible:ring-2 focus-visible:ring-blue-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#020617]"
               >
                 <div className="relative aspect-[16/11] w-full bg-gradient-to-b from-slate-950/40 to-slate-950/80 sm:aspect-[16/10]">
                   <motion.img
@@ -93,7 +93,6 @@ export default function HeroSection() {
                     animate={{
                       opacity: showLight ? 1 : 0,
                       scale: reduceMotion ? 1 : showLight ? 1 : 1.04,
-                      filter: reduceMotion ? 'none' : showLight ? 'blur(0px)' : 'blur(6px)',
                     }}
                     transition={{ duration, ease }}
                   />
@@ -108,7 +107,6 @@ export default function HeroSection() {
                     animate={{
                       opacity: showLight ? 0 : 1,
                       scale: reduceMotion ? 1 : showLight ? 1.04 : 1,
-                      filter: reduceMotion ? 'none' : showLight ? 'blur(6px)' : 'blur(0px)',
                     }}
                     transition={{ duration, ease }}
                   />
@@ -122,7 +120,7 @@ export default function HeroSection() {
                 <div className="pointer-events-none absolute bottom-3 left-1/2 z-10 -translate-x-1/2 sm:bottom-4">
                   <motion.span
                     layout
-                    className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-[#020617]/70 px-3 py-1.5 text-[11px] font-medium text-zinc-200 shadow-lg backdrop-blur-md sm:text-xs"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-[#020617]/95 px-3 py-1.5 text-[11px] font-medium text-zinc-200 shadow-lg sm:text-xs"
                     initial={{ opacity: 0, y: 6 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.35, duration: 0.35 }}
