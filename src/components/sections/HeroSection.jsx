@@ -3,20 +3,30 @@ import { MoveRight } from 'lucide-react'
 import { motion, useReducedMotion } from 'framer-motion'
 import Container from '../ui/Container.jsx'
 import Button from '../ui/Button.jsx'
+import ImageLightbox from '../ui/ImageLightbox.jsx'
 import heroWhite from '../../assets/images/app/white.png'
 import heroDark from '../../assets/images/app/dark.png'
 
 export default function HeroSection() {
   const [showLight, setShowLight] = useState(true)
+  const [lightboxOpen, setLightboxOpen] = useState(false)
   const reduceMotion = useReducedMotion()
 
-  const duration = reduceMotion ? 0.15 : 0.55
+  const duration = reduceMotion ? 0.15 : 0.45
   const ease = [0.22, 1, 0.36, 1]
-
-  const togglePreview = () => setShowLight((v) => !v)
 
   return (
     <section id="top" className="relative pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24">
+      <ImageLightbox
+        open={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        lightSrc={heroWhite}
+        darkSrc={heroDark}
+        showLight={showLight}
+        onThemeChange={setShowLight}
+        reduceMotion={reduceMotion}
+      />
+
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-10">
           <motion.div
@@ -66,48 +76,40 @@ export default function HeroSection() {
               transition={reduceMotion ? undefined : { duration: 6, repeat: Infinity, ease: 'easeInOut' }}
               className="relative"
             >
-              <motion.button
-                type="button"
+              <motion.div
+                role="button"
+                tabIndex={0}
                 layout
-                onClick={togglePreview}
-                aria-pressed={!showLight}
-                aria-label={
-                  showLight
-                    ? 'Product preview: light theme. Click to show dark theme.'
-                    : 'Product preview: dark theme. Click to show light theme.'
-                }
+                aria-haspopup="dialog"
+                aria-expanded={lightboxOpen}
+                aria-label="Open full-size product preview"
                 whileHover={reduceMotion ? undefined : { scale: 1.01 }}
-                whileTap={reduceMotion ? undefined : { scale: 0.99 }}
+                whileTap={reduceMotion ? undefined : { scale: 0.995 }}
                 transition={{ type: 'spring', stiffness: 420, damping: 28 }}
                 className="group relative w-full cursor-pointer overflow-hidden rounded-3xl border border-white/10 bg-[#071028]/90 shadow-2xl shadow-black/50 ring-1 ring-white/10 outline-none focus-visible:ring-2 focus-visible:ring-blue-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#020617]"
+                onClick={() => setLightboxOpen(true)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault()
+                    setLightboxOpen(true)
+                  }
+                }}
               >
                 <div className="relative aspect-[16/11] w-full bg-gradient-to-b from-slate-950/40 to-slate-950/80 sm:aspect-[16/10]">
                   <motion.img
-                    src={heroWhite}
-                    alt="insy8.ai dashboard preview in light mode"
+                    key={showLight ? 'hero-light' : 'hero-dark'}
+                    src={showLight ? heroWhite : heroDark}
+                    alt={
+                      showLight
+                        ? 'insy8.ai dashboard preview, light theme'
+                        : 'insy8.ai dashboard preview, dark theme'
+                    }
                     loading="eager"
                     decoding="async"
                     draggable={false}
                     className="absolute inset-0 h-full w-full object-contain p-2 sm:p-3"
-                    initial={false}
-                    animate={{
-                      opacity: showLight ? 1 : 0,
-                      scale: reduceMotion ? 1 : showLight ? 1 : 1.04,
-                    }}
-                    transition={{ duration, ease }}
-                  />
-                  <motion.img
-                    src={heroDark}
-                    alt="insy8.ai dashboard preview in dark mode"
-                    loading="lazy"
-                    decoding="async"
-                    draggable={false}
-                    className="absolute inset-0 h-full w-full object-contain p-2 sm:p-3"
-                    initial={false}
-                    animate={{
-                      opacity: showLight ? 0 : 1,
-                      scale: reduceMotion ? 1 : showLight ? 1.04 : 1,
-                    }}
+                    initial={{ opacity: 0.92 }}
+                    animate={{ opacity: 1 }}
                     transition={{ duration, ease }}
                   />
 
@@ -125,14 +127,11 @@ export default function HeroSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.35, duration: 0.35 }}
                   >
-                    <span
-                      className={`h-1.5 w-1.5 rounded-full ${showLight ? 'bg-slate-200' : 'bg-indigo-400'} shadow-[0_0_10px_rgba(129,140,248,0.65)]`}
-                      aria-hidden
-                    />
-                    {showLight ? 'Light preview' : 'Dark preview'} — tap to switch
+                    <span className="h-1.5 w-1.5 rounded-full bg-blue-400 shadow-[0_0_10px_rgba(96,165,250,0.65)]" aria-hidden />
+                    Click to view full size
                   </motion.span>
                 </div>
-              </motion.button>
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>
