@@ -17,11 +17,7 @@ export default function SectionHeading({
       ) : null}
       <h2 className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
         {title}
-        {highlight ? (
-          <span className="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
-            {highlight}
-          </span>
-        ) : null}
+        {highlight ? <span className="text-brand-gradient">{highlight}</span> : null}
         {titleSuffix}
       </h2>
       {subtitle ? (

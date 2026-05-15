@@ -1,11 +1,42 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-violet: #7b6fff;
+  --color-brand-cyan: #4fd6ea;
+}
+
+:root {
+  --brand-violet: #7b6fff;
+  --brand-cyan: #4fd6ea;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   @apply min-h-screen bg-[#020617] text-zinc-300 antialiased;
+}
+
+/* Brand utilities — insy8.ai violet → cyan */
+.text-brand-gradient {
+  @apply bg-gradient-to-r from-brand-violet to-brand-cyan bg-clip-text text-transparent;
+}
+
+.bg-brand-gradient {
+  @apply bg-gradient-to-r from-brand-violet to-brand-cyan;
+}
+
+.shadow-brand {
+  box-shadow: 0 10px 40px -12px rgb(123 111 255 / 0.45);
+}
+
+.shadow-brand-lg {
+  box-shadow: 0 20px 50px -15px rgb(123 111 255 / 0.4), 0 8px 24px -8px rgb(79 214 234 / 0.25);
+}
+
+.focus-brand {
+  @apply outline-none focus-visible:ring-2 focus-visible:ring-brand-violet/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#020617];
 }
 
 .logo-text {

@@ -36,7 +36,7 @@ export default function Navbar() {
         <Container className="flex h-16 items-center justify-between gap-4">
           <a
             href="#top"
-            className="group flex items-center gap-3 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-blue-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#020617]"
+            className="group flex items-center gap-3 rounded-lg focus-brand"
           >
             <span className="flex items-center gap-2">
               <Logo className="text-lg sm:text-xl" />

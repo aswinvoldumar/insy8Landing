@@ -2,9 +2,9 @@ import { motion } from 'framer-motion'
 
 const variants = {
   primary:
-    'bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/35 border border-white/10',
+    'bg-brand-gradient text-white shadow-brand border border-white/10 hover:shadow-brand-lg',
   secondary:
-    'border border-white/20 bg-white/5 text-white backdrop-blur-md hover:border-white/30 hover:bg-white/10',
+    'border border-white/20 bg-white/5 text-white backdrop-blur-md hover:border-brand-cyan/30 hover:bg-white/10',
   ghost: 'text-zinc-300 hover:text-white hover:bg-white/5',
 }
 
@@ -23,7 +23,7 @@ export default function Button({
   ...props
 }) {
   const classes = [
-    'inline-flex items-center justify-center gap-2 rounded-xl outline-none transition-colors focus-visible:ring-2 focus-visible:ring-blue-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#020617] disabled:pointer-events-none disabled:opacity-50',
+    'inline-flex items-center justify-center gap-2 rounded-xl transition-colors focus-brand disabled:pointer-events-none disabled:opacity-50',
     variants[variant] ?? variants.primary,
     sizes[size] ?? sizes.md,
     className,

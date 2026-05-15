@@ -66,7 +66,7 @@ export default function ImageLightbox({
             ref={closeRef}
             type="button"
             aria-label="Close"
-            className="absolute right-3 top-3 z-20 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-black/40 text-white backdrop-blur-sm transition hover:bg-black/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/80 sm:right-5 sm:top-5"
+            className="absolute right-3 top-3 z-20 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-black/40 text-white backdrop-blur-sm transition hover:bg-black/60 focus-brand sm:right-5 sm:top-5"
             onClick={onClose}
           >
             <X className="h-5 w-5" aria-hidden />
@@ -97,16 +97,16 @@ export default function ImageLightbox({
                   e.stopPropagation()
                   onThemeChange(!showLight)
                 }}
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/50 px-5 py-2.5 text-sm font-medium text-white shadow-lg backdrop-blur-md transition hover:border-white/30 hover:bg-black/65 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/80 sm:px-6 sm:py-3 sm:text-base"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/50 px-5 py-2.5 text-sm font-medium text-white shadow-lg backdrop-blur-md transition hover:border-brand-cyan/40 hover:bg-black/65 focus-brand sm:px-6 sm:py-3 sm:text-base"
               >
                 {showLight ? (
                   <>
-                    <Moon className="h-4 w-4 shrink-0 text-indigo-300" aria-hidden />
+                    <Moon className="h-4 w-4 shrink-0 text-brand-violet" aria-hidden />
                     Dark mode
                   </>
                 ) : (
                   <>
-                    <Sun className="h-4 w-4 shrink-0 text-amber-300" aria-hidden />
+                    <Sun className="h-4 w-4 shrink-0 text-brand-cyan" aria-hidden />
                     Light mode
                   </>
                 )}

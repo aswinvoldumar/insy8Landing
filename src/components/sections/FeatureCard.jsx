@@ -8,10 +8,10 @@ const accentStyles = {
     border: 'border-emerald-500/25',
   },
   purple: {
-    ring: 'ring-violet-500/25',
-    glow: 'shadow-[0_0_0_1px_rgba(139,92,246,0.18),0_20px_60px_-30px_rgba(139,92,246,0.35)]',
-    number: 'text-violet-300/90',
-    border: 'border-violet-500/25',
+    ring: 'ring-brand-violet/25',
+    glow: 'shadow-[0_0_0_1px_rgba(123,111,255,0.18),0_20px_60px_-30px_rgba(123,111,255,0.35)]',
+    number: 'text-brand-violet',
+    border: 'border-brand-violet/25',
   },
   orange: {
     ring: 'ring-orange-500/25',

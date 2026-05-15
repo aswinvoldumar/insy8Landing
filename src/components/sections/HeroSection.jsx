@@ -38,7 +38,7 @@ export default function HeroSection() {
             <h1 className="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.25rem] lg:leading-[1.05]">
               <span className="block">Your Data.</span>
               <span className="block">Your Questions.</span>
-              <span className="mt-1 block bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
+              <span className="mt-1 block text-brand-gradient">
                 AI-Powered Growth.
               </span>
             </h1>
@@ -49,7 +49,7 @@ export default function HeroSection() {
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Button variant="primary" size="lg" className="rounded-full px-7 shadow-blue-500/30">
+              <Button variant="primary" size="lg" className="rounded-full px-7">
                 Get Started Free
                 <MoveRight className="h-4 w-4" aria-hidden />
               </Button>
@@ -67,7 +67,7 @@ export default function HeroSection() {
             className="relative"
           >
             <div
-              className="pointer-events-none absolute -inset-6 rounded-[2rem] bg-gradient-to-r from-blue-500/25 via-indigo-500/20 to-purple-500/25 blur-2xl"
+              className="pointer-events-none absolute -inset-6 rounded-[2rem] bg-gradient-to-r from-brand-violet/25 to-brand-cyan/20 blur-2xl"
               aria-hidden
             />
 
@@ -86,7 +86,7 @@ export default function HeroSection() {
                 whileHover={reduceMotion ? undefined : { scale: 1.01 }}
                 whileTap={reduceMotion ? undefined : { scale: 0.995 }}
                 transition={{ type: 'spring', stiffness: 420, damping: 28 }}
-                className="group relative w-full cursor-pointer overflow-hidden rounded-3xl border border-white/10 bg-[#071028]/90 shadow-2xl shadow-black/50 ring-1 ring-white/10 outline-none focus-visible:ring-2 focus-visible:ring-blue-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#020617]"
+                className="group relative w-full cursor-pointer overflow-hidden rounded-3xl border border-white/10 bg-[#071028]/90 shadow-2xl shadow-black/50 ring-1 ring-white/10 focus-brand"
                 onClick={() => setLightboxOpen(true)}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
@@ -127,7 +127,7 @@ export default function HeroSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.35, duration: 0.35 }}
                   >
-                    <span className="h-1.5 w-1.5 rounded-full bg-blue-400 shadow-[0_0_10px_rgba(96,165,250,0.65)]" aria-hidden />
+                    <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan shadow-[0_0_10px_rgba(79,214,234,0.65)]" aria-hidden />
                     Click to view full size
                   </motion.span>
                 </div>

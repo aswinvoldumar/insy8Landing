@@ -10,9 +10,9 @@ export default function Home() {
       <div className="pointer-events-none fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-[#020617]" />
         <div className="bg-grid-fine absolute inset-0 opacity-70" />
-        <div className="absolute -left-40 top-10 h-80 w-80 rounded-full bg-blue-600/25 blur-3xl" />
-        <div className="absolute right-[-120px] top-40 h-96 w-96 rounded-full bg-purple-600/20 blur-3xl" />
-        <div className="absolute bottom-[-120px] left-1/3 h-96 w-96 rounded-full bg-indigo-600/15 blur-3xl" />
+        <div className="absolute -left-40 top-10 h-80 w-80 rounded-full bg-brand-violet/25 blur-3xl" />
+        <div className="absolute right-[-120px] top-40 h-96 w-96 rounded-full bg-brand-cyan/20 blur-3xl" />
+        <div className="absolute bottom-[-120px] left-1/3 h-96 w-96 rounded-full bg-brand-violet/15 blur-3xl" />
       </div>
 
       <Navbar />
